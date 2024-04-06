@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/Nanny-service/static/css/main.b095f8ac.css",
-    "main.js": "/Nanny-service/static/js/main.5c21e2ed.js",
+    "main.css": "/Nanny-service/static/css/main.7b0cfe2c.css",
+    "main.js": "/Nanny-service/static/js/main.3d966ba6.js",
+    "static/js/5.d99568d6.chunk.js": "/Nanny-service/static/js/5.d99568d6.chunk.js",
+    "static/js/394.0ba68fb5.chunk.js": "/Nanny-service/static/js/394.0ba68fb5.chunk.js",
+    "static/js/801.e0f1d29f.chunk.js": "/Nanny-service/static/js/801.e0f1d29f.chunk.js",
+    "static/js/555.5bd61519.chunk.js": "/Nanny-service/static/js/555.5bd61519.chunk.js",
+    "static/js/440.3e72ca6a.chunk.js": "/Nanny-service/static/js/440.3e72ca6a.chunk.js",
+    "static/media/homeimg.png": "/Nanny-service/static/media/homeimg.1b5a6b4536177d487186.png",
+    "static/media/icons.svg": "/Nanny-service/static/media/icons.d6c7b6a75d987b2ea8e3857649c56761.svg",
     "index.html": "/Nanny-service/index.html",
-    "main.b095f8ac.css.map": "/Nanny-service/static/css/main.b095f8ac.css.map",
-    "main.5c21e2ed.js.map": "/Nanny-service/static/js/main.5c21e2ed.js.map"
+    "main.7b0cfe2c.css.map": "/Nanny-service/static/css/main.7b0cfe2c.css.map",
+    "main.3d966ba6.js.map": "/Nanny-service/static/js/main.3d966ba6.js.map",
+    "5.d99568d6.chunk.js.map": "/Nanny-service/static/js/5.d99568d6.chunk.js.map",
+    "394.0ba68fb5.chunk.js.map": "/Nanny-service/static/js/394.0ba68fb5.chunk.js.map",
+    "801.e0f1d29f.chunk.js.map": "/Nanny-service/static/js/801.e0f1d29f.chunk.js.map",
+    "555.5bd61519.chunk.js.map": "/Nanny-service/static/js/555.5bd61519.chunk.js.map",
+    "440.3e72ca6a.chunk.js.map": "/Nanny-service/static/js/440.3e72ca6a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b095f8ac.css",
-    "static/js/main.5c21e2ed.js"
+    "static/css/main.7b0cfe2c.css",
+    "static/js/main.3d966ba6.js"
   ]
 }
