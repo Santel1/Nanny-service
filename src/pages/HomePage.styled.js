@@ -44,13 +44,20 @@ export const HomePageStyled = styled.div`
     line-height: 120%;
     letter-spacing: -0.01em;
     color: var(--primary-color-white);
+    fill: var(--primary-color-white);
     border: 1px solid rgba(251, 251, 251, 0.4);
     border-radius: 30px;
     padding: 18px 50px;
     background-color: transparent;
+    transition: background-color 0.3s, color 0.3s, fill 0.3s;
+    &.homePageBtn:hover,
+    .homePageBtn:focus {
+      background-color: var(--primary-color-white);
+      color: var(--primary-color-green);
+      fill: var(--primary-color-green);
+    }
   }
-  .homePageIco {
-  }
+
   .homePageRightSection {
     position: relative;
     overflow: hidden;

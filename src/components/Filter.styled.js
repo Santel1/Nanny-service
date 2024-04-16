@@ -31,6 +31,12 @@ export const FilterButton = styled.button`
   color: var(--primary-color-white);
   outline: none;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover,
+  :focus {
+    color: var(--primary-color-green);
+    background-color: var(--secondary-color-green);
+  }
 `;
 
 export const FilterList = styled.ul`

@@ -44,6 +44,12 @@ export const StyledHeaderContainer = styled.header`
       background-color: transparent;
       border-radius: 30px;
       padding: 14px 39px;
+      transition: all 0.3s;
+      &.loginBtn:hover,
+      .loginBtn:focus {
+        color: var(--primary-color-white);
+        background-color: var(--primary-color-green);
+      }
     }
     .registerBtn {
       font-family: var(--font-family);
@@ -55,6 +61,12 @@ export const StyledHeaderContainer = styled.header`
       border-radius: 30px;
       padding: 14px 40px;
       background-color: var(--primary-color-green);
+      transition: all 0.3s;
+      &.registerBtn:hover,
+      .registerBtn:focus {
+        color: var(--primary-color-green);
+        background-color: var(--primary-color-white);
+      }
     }
   }
 
@@ -90,6 +102,12 @@ export const StyledHeaderContainer = styled.header`
       background-color: transparent;
       border-radius: 30px;
       padding: 14px 39px;
+      transition: all 0.3s;
+      &.loginBtn:hover,
+      .loginBtn :focus {
+        color: var(--primary-color-green);
+        background-color: var(--primary-color-white);
+      }
     }
     .registerBtn {
       font-family: var(--font-family);
@@ -102,6 +120,12 @@ export const StyledHeaderContainer = styled.header`
       background-color: transparent;
       border-radius: 30px;
       padding: 14px 39px;
+      transition: all 0.3s;
+      &.registerBtn:hover,
+      .registerBtn:focus {
+        color: var(--primary-color-green);
+        background-color: var(--primary-color-white);
+      }
     }
   }
 
@@ -176,6 +200,12 @@ export const StyledHeaderContainer = styled.header`
     background-color: transparent;
     border-radius: 30px;
     padding: 14px 39px;
+    transition: all 0.3s;
+    &.logoutBtn:hover,
+    .logoutBtn:focus {
+      color: var(--primary-color-green);
+      background-color: var(--primary-color-white);
+    }
   }
   .userName {
     font-family: var(--font-family);

@@ -12,7 +12,6 @@ export const fetchData = createAsyncThunk(
         const data = snapshot.val();
         return data;
       } else {
-        console.log("Данные не найдены");
         return rejectWithValue("Данные не найдены");
       }
     } catch (error) {

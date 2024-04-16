@@ -21,3 +21,8 @@ export const selectNannyiesFilter = createSelector(
   selectNannies,
   (nanny) => nanny.selectedFilter
 );
+
+export const selectNanniesLastKey = createSelector(
+  selectNannies,
+  (nanny) => nanny.lastKey
+);

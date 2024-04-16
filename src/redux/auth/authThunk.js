@@ -21,7 +21,7 @@ export const registerUser = createAsyncThunk(
       await updateProfile(currentUser, {
         displayName: name,
       });
-      console.log(userCredential);
+
       return {
         uid: currentUser.uid,
         email: currentUser.email,

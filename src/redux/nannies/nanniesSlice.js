@@ -2,11 +2,12 @@ import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { fetchData } from "./nanniesThunk";
 
 const INITIAL_STATE = {
-  nannies: null,
+  nannies: [],
   favorites: [],
   isLoading: false,
   error: null,
   selectedFilter: "",
+  lastKey: null,
 };
 
 const nanniesSlice = createSlice({
@@ -27,7 +28,6 @@ const nanniesSlice = createSlice({
   },
   extraReducers: (builder) =>
     builder
-
       .addCase(fetchData.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSignedIn = true;

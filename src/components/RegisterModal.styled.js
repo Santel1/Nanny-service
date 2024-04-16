@@ -81,6 +81,11 @@ export const StyledRegisterModal = styled.form`
     letter-spacing: -0.01em;
     color: var(--primary-color-white);
     background-color: var(--primary-color-green);
+    &.registerModalBtn:hover,
+    .registerModalBtn:focus {
+      color: var(--primary-color-green);
+      background-color: var(--secondary-color-green);
+    }
   }
   .icon-wrapper {
     position: absolute;

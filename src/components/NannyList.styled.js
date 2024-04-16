@@ -4,6 +4,7 @@ export const StyledNannyContainer = styled.div`
   .nannyList {
     display: flex;
     flex-direction: column;
+    margin-bottom: 64px;
     gap: 32px;
     font-family: var(--font-family);
     color: var(--primary-color-black);
@@ -137,9 +138,17 @@ export const StyledNannyContainer = styled.div`
     font-size: 16px;
     line-height: 150%;
     text-decoration: underline;
+    padding: 10px;
+    border-radius: 24px;
     text-decoration-skip-ink: none;
     color: var(--primary-color-black);
     background-color: transparent;
+    transition: all 0.3s;
+    &.readMoreBtn:hover,
+    .readMoreBtn:focus {
+      color: var(--primary-color-green);
+      background-color: var(--primary-color-grey);
+    }
   }
   .nannyCommentSection {
   }
@@ -197,5 +206,37 @@ export const StyledNannyContainer = styled.div`
     font-size: 16px;
     line-height: 125%;
     letter-spacing: -0.01em;
+    transition: all 0.3s;
+    &.appointmentBtn:hover,
+    .appointmentBtn:focus {
+      color: var(--primary-color-green);
+      background-color: var(--secondary-color-green);
+    }
+  }
+  .filterErrorText {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+  .loadMoreWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .loadMoreBtn {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    background-color: var(--primary-color-green);
+    color: var(--primary-color-white);
+    border-radius: 30px;
+    padding: 14px;
+    width: 159px;
+    height: 48px;
   }
 `;

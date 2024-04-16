@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Overlay = styled.div`
   position: fixed;
+  display: flex;
+  justify-content: center;
+  box-sizing: content-box;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -10,22 +13,20 @@ export const Overlay = styled.div`
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 3;
-  overflow-y: auto;
+  overflow: auto;
 `;
 
 export const StyledAppointmentModal = styled.form`
   display: flex;
-  position: relative;
+  position: absolute;
   flex-direction: column;
   box-sizing: border-box;
-  top: 50%;
-  left: 50%;
-  margin-top: 5vh;
-  transform: translate(-50%, -50%);
   width: 566px;
   padding: 64px;
   border-radius: 30px;
   background-color: var(--primary-color-white);
+  z-index: 4;
+
   .formTitle {
     font-family: var(--font-family);
     font-weight: 500;
@@ -92,6 +93,12 @@ export const StyledAppointmentModal = styled.form`
     letter-spacing: -0.01em;
     color: var(--primary-color-white);
     background-color: var(--primary-color-green);
+    transition: all 0.3s;
+    &.appointmentModalBtn:hover,
+    .appointmentModalBtn:focus {
+      color: var(--primary-color-green);
+      background-color: var(--secondary-color-green);
+    }
   }
   .icon-wrapper {
     position: absolute;
