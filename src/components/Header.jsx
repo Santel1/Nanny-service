@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { NavLink } from "react-router-dom";
-import { StyledHeaderContainer } from "./Header.styled";
+import { StyledHeader, StyledMobileMenu } from "./Header.styled";
 import icons from "../images/icons.svg";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
@@ -13,6 +13,7 @@ import {
 import { logoutUser } from "../redux/auth/authThunk";
 
 const Header = ({ isHomePage }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const isSignedId = useSelector(selectAuthIsSignedIn);
@@ -36,19 +37,32 @@ const Header = ({ isHomePage }) => {
     setIsRegisterModalOpen(false);
     document.body.classList.remove("modal-open");
   };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    if (!isSidebarOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  };
+
   const logOut = () => {
     dispatch(logoutUser());
   };
   return (
-    <StyledHeaderContainer
-      className={isHomePage ? "transparentHeader" : "greenHeader"}
-    >
+    <StyledHeader className={isHomePage ? "transparentHeader" : "greenHeader"}>
       <nav className="navContainer">
         <div className="logoContainer">
           <NavLink className="logo" to="home">
             <p className="logoText">Nanny.Services</p>
           </NavLink>
         </div>
+        <button className="menuBtn" onClick={toggleSidebar}>
+          <svg className="mobileMenuIcon" width="24" height="24">
+            <use href={icons + "#icon-mobile-menu"}></use>
+          </svg>
+        </button>
         <div className="sectionContainer">
           <NavLink className="link" to="/">
             Home
@@ -104,7 +118,74 @@ const Header = ({ isHomePage }) => {
           )}
         </div>
       </nav>
-    </StyledHeaderContainer>
+      {isSidebarOpen && (
+        <StyledMobileMenu className="mobileMenu">
+          <button className="closeMobileBtn" onClick={toggleSidebar}>
+            <svg className="" width="24" height="24">
+              <use href={icons + "#icon-close"}></use>
+            </svg>
+          </button>
+          <NavLink className="mobileMenuLink" to="/" onClick={toggleSidebar}>
+            Home
+          </NavLink>
+          <NavLink
+            className="mobileMenuLink"
+            to="/nanny"
+            onClick={toggleSidebar}
+          >
+            Nanny
+          </NavLink>
+          {isSignedId && (
+            <NavLink
+              className="mobileMenuLink"
+              to="/favorites"
+              onClick={toggleSidebar}
+            >
+              Favorites
+            </NavLink>
+          )}
+          {!isSignedId ? (
+            <>
+              {" "}
+              <button
+                onClick={() => {
+                  handleOpenLoginModal();
+                }}
+                className="loginMobileBtn"
+              >
+                Login
+              </button>
+              <button
+                onClick={() => {
+                  handleOpenRegisterModal();
+                }}
+                className="registerMobileBtn"
+              >
+                Register
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="usernameMobileWrapper">
+                <div className="userMobileIconWrapper">
+                  <svg className="userMobileIcon" width="24" height="24">
+                    <use href={icons + "#icon-user"}></use>
+                  </svg>
+                </div>
+                <p className="userMobileName">{user.name.split(" ")[0]}</p>
+              </div>
+              <button className="logoutMobileBtn" onClick={logOut}>
+                Log out
+              </button>
+            </>
+          )}
+          {isLoginModalOpen && <LoginModal onClose={handleCloseLoginModal} />}
+          {isRegisterModalOpen && (
+            <RegisterModal onClose={handleCloseRegisterModal}></RegisterModal>
+          )}
+        </StyledMobileMenu>
+      )}
+    </StyledHeader>
   );
 };
 
