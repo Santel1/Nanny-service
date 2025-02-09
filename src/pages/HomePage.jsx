@@ -1,21 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HomePageStyled } from "./HomePage.styled";
-import bgcImg from "../images/homeimg.png";
+import bgcImg from "../images/homeimg.jpg";
 import icons from "../images/icons.svg";
 import RegisterModal from "../components/RegisterModal";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectAuthIsSignedIn } from "../redux/auth/auth.selectors";
+import {
+  selectAllNannies,
+  selectNanniesIsLoading,
+} from "../redux/nannies/nannies.selectors";
+import { Loader } from "../components/Loader";
+import { fetchData } from "../redux/nannies/nanniesThunk";
 
 const HomePage = () => {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const isLoading = useSelector(selectNanniesIsLoading);
+  const dispatch = useDispatch();
   const isLoggined = useSelector(selectAuthIsSignedIn);
+  const nannies = useSelector(selectAllNannies);
 
   const handleOpenRegisterModal = () => {
     setIsRegisterModalOpen(true);
   };
 
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
   return (
     <HomePageStyled>
+      {isLoading && <Loader color={"#fff"} />}
       <div className="homePageLeftSection">
         <div>
           <h1 className="homePageTitle">
@@ -49,7 +63,13 @@ const HomePage = () => {
           </div>
           <div className="textWrapper">
             <p className="infoText">Experienced nannies</p>
-            <p className="infoNumber">15,000</p>
+            {isLoading ? (
+              <p className="infoNumber">
+                <Loader className="infoLoader" width={25} />
+              </p>
+            ) : (
+              <p className="infoNumber">{11000 + nannies.length}</p>
+            )}
           </div>
         </div>
       </div>

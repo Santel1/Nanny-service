@@ -16,8 +16,6 @@ export const StyledNannyContainer = styled.div`
       border-radius: 24px;
       padding: 36px;
     }
-    .nannyImgWrapper {
-    }
     .nannyImg {
       overflow: hidden;
       border-radius: 20px;
@@ -61,10 +59,6 @@ export const StyledNannyContainer = styled.div`
       display: flex;
       align-items: center;
       gap: 4px;
-    }
-    .ratingIco {
-    }
-    .nannyPrice {
     }
     .favoriteNannyBtn {
       position: absolute;
@@ -110,16 +104,6 @@ export const StyledNannyContainer = styled.div`
       line-height: 150%;
       color: var(--secondary-color-grey);
     }
-    .nannyAge {
-    }
-    .nannyExperience {
-    }
-    .nannyKidsAge {
-    }
-    .nannyCharakters {
-    }
-    .nannyEducation {
-    }
     .styledSpan {
       color: var(--primary-color-black);
       &.age {
@@ -152,8 +136,7 @@ export const StyledNannyContainer = styled.div`
         background-color: var(--primary-color-grey);
       }
     }
-    .nannyCommentSection {
-    }
+
     .reviewsList {
       margin-bottom: 48px;
     }
@@ -256,8 +239,7 @@ export const StyledNannyContainer = styled.div`
       border-radius: 24px;
       padding: 36px;
     }
-    .nannyImgWrapper {
-    }
+ 
     .nannyImg {
       overflow: hidden;
       border-radius: 20px;
@@ -285,7 +267,6 @@ export const StyledNannyContainer = styled.div`
     }
     .nannySectionWrapper {
       display: flex;
-
       gap: 32px;
     }
     .nannyLocation {
@@ -302,10 +283,7 @@ export const StyledNannyContainer = styled.div`
       align-items: center;
       gap: 4px;
     }
-    .ratingIco {
-    }
-    .nannyPrice {
-    }
+
     .favoriteNannyBtn {
       background-color: transparent;
       .iconHeart {
@@ -347,16 +325,7 @@ export const StyledNannyContainer = styled.div`
       line-height: 150%;
       color: var(--secondary-color-grey);
     }
-    .nannyAge {
-    }
-    .nannyExperience {
-    }
-    .nannyKidsAge {
-    }
-    .nannyCharakters {
-    }
-    .nannyEducation {
-    }
+
     .styledSpan {
       color: var(--primary-color-black);
       &.age {
@@ -389,8 +358,7 @@ export const StyledNannyContainer = styled.div`
         background-color: var(--primary-color-grey);
       }
     }
-    .nannyCommentSection {
-    }
+ 
     .reviewsList {
       margin-bottom: 48px;
     }
@@ -544,10 +512,7 @@ export const StyledNannyContainer = styled.div`
       align-items: center;
       gap: 4px;
     }
-    .ratingIco {
-    }
-    .nannyPrice {
-    }
+
     .favoriteNannyBtn {
       position: relative;
       top: 0;
@@ -592,16 +557,6 @@ export const StyledNannyContainer = styled.div`
       line-height: 150%;
       color: var(--secondary-color-grey);
     }
-    .nannyAge {
-    }
-    .nannyExperience {
-    }
-    .nannyKidsAge {
-    }
-    .nannyCharakters {
-    }
-    .nannyEducation {
-    }
     .styledSpan {
       color: var(--primary-color-black);
       &.age {
@@ -634,8 +589,7 @@ export const StyledNannyContainer = styled.div`
         background-color: var(--primary-color-grey);
       }
     }
-    .nannyCommentSection {
-    }
+ 
     .reviewsList {
       margin-bottom: 48px;
     }

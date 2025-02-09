@@ -4,7 +4,7 @@ import { fetchData } from "./nanniesThunk";
 const INITIAL_STATE = {
   nannies: [],
   favorites: [],
-  isLoading: false,
+  isLoading: true,
   error: null,
   selectedFilter: "",
   lastKey: null,

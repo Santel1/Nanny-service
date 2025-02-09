@@ -79,7 +79,6 @@ const NannyList = ({
     return age;
   };
   const handleLoadMore = () => {
-    // Увеличиваем количество загруженных карточек на 3
     setLoadedNanniesCount(loadedNanniesCount + 3);
   };
 

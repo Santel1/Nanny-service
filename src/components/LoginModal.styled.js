@@ -35,7 +35,6 @@ export const StyledLoginModal = styled.form`
     padding: 30px;
     border-radius: 30px;
     background-color: var(--primary-color-white);
-
     .formTitle {
       font-family: var(--font-family);
       font-weight: 500;

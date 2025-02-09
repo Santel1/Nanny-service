@@ -654,12 +654,6 @@ export const StyledMobileMenu = styled.header`
       display: flex;
       gap: 20px;
     }
-    .userMobileIconWrapper {
-    }
-    .userMobileIcon {
-    }
-    .userMobileName {
-    }
     .logoutMobileBtn {
       border-radius: 30px;
       padding: 16px;
